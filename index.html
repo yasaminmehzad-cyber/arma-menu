@@ -1,6 +1,14 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#243B63">
+<title>ARMA COFFEE | Digital Menu</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,67 +16,71 @@
 }
 
 :root {
-  --bg: #243B63;
-  --card: #F5EBDD;
+  --navy: #243B63;
+  --navy-light: #304C78;
+  --cream: #F5EBDD;
   --gold: #D6B574;
-  --text: #243B63;
-  --muted: #6B7280;
+  --muted: #777B83;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--card);
+  background: var(--navy);
+  color: var(--cream);
   font-family: 'Vazirmatn', Tahoma, sans-serif;
   line-height: 1.9;
 }
 
 header {
   text-align: center;
-  padding: 45px 15px 35px;
+  padding: 42px 18px 32px;
   background: linear-gradient(145deg, #304C78, #243B63);
   border-bottom: 2px solid var(--gold);
 }
 
 .logo {
-  width: 74px;
-  height: 74px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 16px;
   display: grid;
   place-items: center;
-  margin: auto auto 15px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
   color: var(--gold);
-  font: 30px Georgia, serif;
+  font: 35px Georgia, serif;
 }
 
-h1 {
+.brand {
   direction: ltr;
-  color: var(--card);
-  font: 40px Georgia, serif;
+  font: 42px Georgia, serif;
   letter-spacing: 7px;
+  color: var(--cream);
 }
 
 .tagline {
   direction: ltr;
-  font: 10px Georgia, serif;
-  letter-spacing: 4px;
   color: var(--gold);
-  margin-top: 5px;
+  font: 11px Georgia, serif;
+  letter-spacing: 5px;
+  margin-top: 4px;
 }
 
 .welcome {
-  color: var(--card);
+  color: var(--cream);
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 .instagram {
   display: inline-block;
   margin-top: 17px;
-  padding: 7px 18px;
+  padding: 6px 20px;
   border: 1px solid var(--gold);
   border-radius: 25px;
-  color: var(--card);
+  color: var(--cream);
   text-decoration: none;
   font-size: 12px;
 }
@@ -76,22 +88,22 @@ h1 {
 nav {
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   display: flex;
-  overflow-x: auto;
   gap: 9px;
-  padding: 13px 12px;
-  background: #F5EBDD;
+  overflow-x: auto;
+  padding: 13px;
+  background: var(--cream);
   border-bottom: 1px solid var(--gold);
 }
 
 nav a {
   flex-shrink: 0;
   text-decoration: none;
-  color: #243B63;
+  color: var(--navy);
   border: 1px solid var(--gold);
   border-radius: 22px;
-  padding: 5px 13px;
+  padding: 5px 14px;
   font-size: 12px;
 }
 
@@ -105,29 +117,30 @@ nav a {
 .section-title {
   font-size: 21px;
   font-weight: 600;
-  color: var(--card);
+  color: var(--cream);
   border-right: 3px solid var(--gold);
   padding-right: 12px;
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
-  gap: 13px;
-  padding: 12px;
-  margin-bottom: 12px;
-  background: var(--card);
+  gap: 14px;
+  padding: 13px;
+  margin-bottom: 13px;
+  background: var(--cream);
   border: 1px solid var(--gold);
-  border-radius: 13px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0,0,0,.15);
 }
 
 .product-img {
-  width: 94px;
-  height: 100px;
+  width: 100px;
+  height: 105px;
+  flex-shrink: 0;
   object-fit: cover;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #E5D8C5;
 }
 
@@ -137,29 +150,28 @@ nav a {
 }
 
 .item-name {
+  color: var(--navy);
   font-size: 15px;
   font-weight: 700;
-  color: #243B63;
 }
 
 .item-desc {
+  color: var(--muted);
   font-size: 11px;
-  color: #6B7280;
   margin-top: 4px;
 }
 
 .price {
   direction: ltr;
-  white-space: nowrap;
-  color: #243B63;
+  color: var(--navy);
   font-size: 13px;
   font-weight: 700;
   margin-top: 8px;
 }
 
 .price small {
+  color: #96723A;
   font-size: 10px;
-  color: #8C6D36;
 }
 
 .club {
@@ -167,12 +179,11 @@ nav a {
   padding: 24px 18px;
   border: 1px solid var(--gold);
   border-radius: 15px;
-  background: var(--card);
-  color: #243B63;
+  background: var(--cream);
+  color: var(--navy);
 }
 
 .club h2 {
-  color: #243B63;
   font-size: 21px;
   margin-bottom: 8px;
 }
@@ -187,10 +198,10 @@ nav a {
   width: 100%;
   padding: 12px;
   margin: 6px 0;
-  border: 1px solid #D6B574;
+  border: 1px solid var(--gold);
   border-radius: 8px;
   background: #FFFCF6;
-  color: #243B63;
+  color: var(--navy);
   font: 13px 'Vazirmatn', sans-serif;
 }
 
@@ -198,23 +209,17 @@ nav a {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
-  background: #243B63;
-  color: #F5EBDD;
+  background: var(--navy);
+  color: var(--cream);
   border: 1px solid var(--gold);
   border-radius: 8px;
   font: 600 14px 'Vazirmatn', sans-serif;
 }
 
-.club .disclaimer {
-  margin-top: 12px;
-  font-size: 10px;
-  color: #6B7280;
-}
-
 .note {
   text-align: center;
   font-size: 10px;
-  color: #F5EBDD;
+  color: var(--cream);
   padding: 10px 20px;
 }
 
@@ -227,15 +232,15 @@ footer {
 }
 
 footer strong {
-  direction: ltr;
   display: block;
+  direction: ltr;
   color: var(--gold);
-  font: 25px Georgia, serif;
+  font: 27px Georgia, serif;
   letter-spacing: 5px;
 }
 
 footer p {
-  color: #F5EBDD;
+  color: var(--cream);
   font-size: 11px;
   margin-top: 8px;
 }
@@ -251,3 +256,107 @@ footer p {
   }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">A</div>
+  <h1 class="brand">ARMA</h1>
+  <div class="tagline">COFFEE & MORE</div>
+  <p class="welcome">به آرما کافی خوش آمدید</p>
+  <a class="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">INSTAGRAM</a>
+</header>
+
+<nav>
+  <a href="#coffee">قهوه گرم</a>
+  <a href="#cold">نوشیدنی سرد</a>
+  <a href="#cake">کیک و دسر</a>
+  <a href="#club">باشگاه مشتریان</a>
+</nav>
+
+<section class="section" id="coffee">
+  <h2 class="section-title">قهوه‌های گرم</h2>
+
+  <article class="menu-item">
+    <img class="product-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="اسپرسو">
+    <div class="info">
+      <h3 class="item-name">اسپرسو</h3>
+      <p class="item-desc">قهوه خالص با عطر و طعم ماندگار</p>
+      <p class="price">۱۲۰٬۰۰۰ <small>تومان</small></p>
+    </div>
+  </article>
+
+  <article class="menu-item">
+    <img class="product-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400" alt="کاپوچینو">
+    <div class="info">
+      <h3 class="item-name">کاپوچینو</h3>
+      <p class="item-desc">اسپرسو، شیر بخار داده شده و فوم لطیف</p>
+      <p class="price">۱۶۰٬۰۰۰ <small>تومان</small></p>
+    </div>
+  </article>
+
+  <article class="menu-item">
+    <img class="product-img" src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400" alt="لاته">
+    <div class="info">
+      <h3 class="item-name">لاته</h3>
+      <p class="item-desc">ترکیب اسپرسو و شیر نرم و خامه‌ای</p>
+      <p class="price">۱۷۰٬۰۰۰ <small>تومان</small></p>
+    </div>
+  </article>
+</section>
+
+<section class="section" id="cold">
+  <h2 class="section-title">نوشیدنی‌های سرد</h2>
+
+  <article class="menu-item">
+    <img class="product-img" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400" alt="آیس کافی">
+    <div class="info">
+      <h3 class="item-name">آیس کافی</h3>
+      <p class="item-desc">قهوه خنک با طعمی دلنشین</p>
+      <p class="price">۱۸۰٬۰۰۰ <small>تومان</small></p>
+    </div>
+  </article>
+
+  <article class="menu-item">
+    <img class="product-img" src="https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?w=400" alt="لیموناد">
+    <div class="info">
+      <h3 class="item-name">لیموناد</h3>
+      <p class="item-desc">نوشیدنی خنک و تازه لیمویی</p>
+      <p class="price">۱۴۰٬۰۰۰ <small>تومان</small></p>
+    </div>
+  </article>
+</section>
+
+<section class="section" id="cake">
+  <h2 class="section-title">کیک و دسر</h2>
+
+  <article class="menu-item">
+    <img class="product-img" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="کیک شکلاتی">
+    <div class="info">
+      <h3 class="item-name">کیک شکلاتی</h3>
+      <p class="item-desc">کیک شکلاتی با بافت نرم و غنی</p>
+      <p class="price">۱۹۰٬۰۰۰ <small>تومان</small></p>
+    </div>
+  </article>
+</section>
+
+<section class="club" id="club">
+  <h2>باشگاه مشتریان آرما</h2>
+  <p>به‌زودی امکانات ویژه و پیشنهادهای اختصاصی برای اعضای باشگاه.</p>
+  <input type="text" placeholder="نام شما">
+  <input type="tel" placeholder="شماره موبایل">
+  <button type="button" onclick="alert('این بخش در نسخه آزمایشی است.')">عضویت در باشگاه</button>
+  <p class="disclaimer">این فرم در حال حاضر آزمایشی است و اطلاعاتی ارسال نمی‌کند.</p>
+</section>
+
+<p class="note">قیمت‌ها نمونه هستند و در نسخه آزمایشی قرار گرفته‌اند.</p>
+
+<footer>
+  <strong>ARMA COFFEE</strong>
+  <p>یک تجربه متفاوت از طعم و آرامش</p>
+  <p>© ARMA COFFEE</p>
+</footer>
+
+</body>
+</html>
