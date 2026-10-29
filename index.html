@@ -2,175 +2,244 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101010">
-<title>ARMA | کافه آرما</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0b0b">
+<title>ARMA COFFEE | Digital Menu</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#0b0b0b;
+  --card:#151512;
+  --gold:#d6b574;
+  --text:#f5efe3;
+  --muted:#a8a092;
 }
 
-body {
-  background: #101010;
-  color: #f5f0e6;
-  font-family: Tahoma, Arial, sans-serif;
-  line-height: 1.9;
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Vazirmatn',Tahoma,sans-serif;
+  line-height:1.9;
 }
 
-header {
-  text-align: center;
-  padding: 38px 15px 28px;
-  background: linear-gradient(180deg, #242019, #101010);
-  border-bottom: 1px solid #8c713e;
+header{
+  text-align:center;
+  padding:45px 15px 35px;
+  background:radial-gradient(ellipse at top,#342918 0%,#15130f 45%,#0b0b0b 100%);
+  border-bottom:1px solid #554426;
 }
 
-.logo {
-  width: 76px;
-  height: 76px;
-  border: 2px solid #d4af67;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 12px;
-  color: #e0bd79;
-  font-size: 34px;
-  font-weight: bold;
-  letter-spacing: 2px;
+.logo{
+  width:74px;height:74px;
+  border:1px solid var(--gold);
+  border-radius:50%;
+  display:grid;place-items:center;
+  margin:auto auto 15px;
+  color:var(--gold);
+  font:30px Georgia,serif;
 }
 
-h1 {
-  font-size: 39px;
-  letter-spacing: 7px;
-  color: #e2c17f;
-  direction: ltr;
+h1{
+  direction:ltr;
+  color:var(--gold);
+  font:40px Georgia,serif;
+  letter-spacing:7px;
 }
 
-.subtitle {
-  color: #c9bda6;
-  font-size: 12px;
-  letter-spacing: 3px;
-  direction: ltr;
+.tagline{
+  direction:ltr;
+  font:10px Georgia,serif;
+  letter-spacing:4px;
+  color:#d6c9af;
+  margin-top:5px;
 }
 
-.welcome {
-  margin-top: 15px;
-  font-size: 13px;
-  color: #e4dccd;
+.welcome{
+  color:#d5cbbb;
+  font-size:12px;
+  margin-top:20px;
 }
 
-nav {
-  display: flex;
-  gap: 9px;
-  padding: 18px 12px;
-  overflow-x: auto;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: #101010;
-  border-bottom: 1px solid #30291e;
+.instagram{
+  display:inline-block;
+  margin-top:17px;
+  padding:7px 18px;
+  border:1px solid #80683c;
+  border-radius:25px;
+  color:var(--gold);
+  text-decoration:none;
+  font-size:12px;
 }
 
-nav a {
-  white-space: nowrap;
-  text-decoration: none;
-  color: #e1c17e;
-  border: 1px solid #75603b;
-  border-radius: 22px;
-  padding: 5px 13px;
-  font-size: 12px;
+nav{
+  position:sticky;
+  top:0;
+  z-index:5;
+  display:flex;
+  overflow-x:auto;
+  gap:9px;
+  padding:13px 12px;
+  background:#0b0b0bf5;
+  border-bottom:1px solid #30291e;
 }
 
-.section {
-  padding: 25px 16px 10px;
-  max-width: 700px;
-  margin: auto;
-  scroll-margin-top: 80px;
+nav a{
+  flex-shrink:0;
+  text-decoration:none;
+  color:var(--gold);
+  border:1px solid #655333;
+  border-radius:22px;
+  padding:5px 13px;
+  font-size:12px;
 }
 
-.section-title {
-  font-size: 21px;
-  color: #e2c17f;
-  margin-bottom: 16px;
-  padding-right: 10px;
-  border-right: 3px solid #c4a15e;
+.section{
+  max-width:760px;
+  margin:auto;
+  padding:28px 15px 5px;
+  scroll-margin-top:75px;
 }
 
-.menu-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background: #1b1a17;
-  border: 1px solid #353027;
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 10px;
+.section-title{
+  font-size:21px;
+  font-weight:500;
+  color:var(--gold);
+  border-right:3px solid var(--gold);
+  padding-right:12px;
+  margin-bottom:17px;
 }
 
-.item-info {
-  flex: 1;
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  padding:12px;
+  margin-bottom:12px;
+  background:linear-gradient(120deg,#191815,#111110);
+  border:1px solid #302b21;
+  border-radius:13px;
 }
 
-.item-name {
-  font-size: 14px;
-  font-weight: bold;
-  color: #f4ead7;
+.product-img{
+  width:94px;
+  height:100px;
+  object-fit:cover;
+  border-radius:9px;
+  background:#28241d;
 }
 
-.item-desc {
-  color: #a9a194;
-  font-size: 11px;
-  margin-top: 2px;
+.info{flex:1;min-width:0}
+
+.item-name{
+  font-size:15px;
+  font-weight:600;
+  color:#f3e6cc;
 }
 
-.price {
-  white-space: nowrap;
-  color: #e2c17f;
-  font-size: 13px;
-  font-weight: bold;
+.item-desc{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:4px;
 }
 
-.note {
-  text-align: center;
-  color: #8e8779;
-  font-size: 10px;
-  margin: 25px 10px;
+.price{
+  direction:ltr;
+  white-space:nowrap;
+  color:var(--gold);
+  font-size:13px;
+  font-weight:600;
+  margin-top:8px;
 }
 
-footer {
-  margin-top: 35px;
-  padding: 30px 15px;
-  text-align: center;
-  border-top: 1px solid #55452b;
-  background: #191713;
+.price small{
+  font-size:10px;
+  color:#b9a987;
 }
 
-footer strong {
-  color: #e2c17f;
-  font-size: 24px;
-  letter-spacing: 4px;
-  direction: ltr;
-  display: inline-block;
+.club{
+  margin:35px 15px;
+  padding:24px 18px;
+  border:1px solid #725a31;
+  border-radius:15px;
+  background:linear-gradient(145deg,#211c13,#111110);
 }
 
-footer p {
-  color: #a9a194;
-  font-size: 11px;
-  margin-top: 8px;
+.club h2{
+  color:var(--gold);
+  font-size:21px;
+  margin-bottom:8px;
 }
 
-@media (min-width: 600px) {
-  .menu-item {
-    padding: 18px 20px;
-  }
-  .section {
-    padding-top: 35px;
-  }
+.club p{
+  font-size:12px;
+  color:#c2b8a7;
+  margin-bottom:15px;
+}
+
+.club input{
+  width:100%;
+  padding:12px;
+  margin:6px 0;
+  border:1px solid #51432d;
+  border-radius:8px;
+  background:#0c0c0b;
+  color:white;
+  font:13px 'Vazirmatn',sans-serif;
+}
+
+.club button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  background:var(--gold);
+  color:#15110a;
+  border:0;
+  border-radius:8px;
+  font:600 14px 'Vazirmatn',sans-serif;
+}
+
+.club .disclaimer{
+  margin-top:12px;
+  font-size:10px;
+  color:#9f9584;
+}
+
+.note{
+  text-align:center;
+  font-size:10px;
+  color:#898171;
+  padding:10px 20px;
+}
+
+footer{
+  text-align:center;
+  margin-top:30px;
+  padding:30px 15px;
+  border-top:1px solid #4b3c25;
+  background:#12110f;
+}
+
+footer strong{
+  direction:ltr;
+  display:block;
+  color:var(--gold);
+  font:25px Georgia,serif;
+  letter-spacing:5px;
+}
+
+footer p{
+  color:#a79c8a;
+  font-size:11px;
+  margin-top:8px;
+}
+
+@media(min-width:600px){
+  .menu-item{padding:15px}
+  .product-img{width:115px;height:110px}
 }
 </style>
 </head>
@@ -180,137 +249,155 @@ footer p {
 <header>
   <div class="logo">A</div>
   <h1>ARMA</h1>
-  <div class="subtitle">COFFEE & MORE</div>
-  <p class="welcome">به دنیای طعم‌های خاص خوش آمدید</p>
+  <div class="tagline">MORE THAN JUST COFFEE</div>
+  <p class="welcome">تجربه‌ای متفاوت، برای سلیقه‌های خاص</p>
+  <a class="instagram" href="https://www.instagram.com/arma__coffee/" target="_blank" rel="noopener">
+    ما را در اینستاگرام دنبال کنید
+  </a>
 </header>
 
 <nav>
   <a href="#hot">قهوه گرم</a>
   <a href="#cold">نوشیدنی سرد</a>
-  <a href="#special">نوشیدنی ویژه</a>
-  <a href="#cake">کیک و دسر</a>
+  <a href="#special">ویژه آرما</a>
+  <a href="#dessert">کیک و دسر</a>
+  <a href="#club">باشگاه مشتریان</a>
 </nav>
 
 <section class="section" id="hot">
-  <h2 class="section-title">قهوه گرم</h2>
+<h2 class="section-title">قهوه گرم</h2>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">اسپرسو</div>
-      <div class="item-desc">قهوه غلیظ با عطر ماندگار</div>
-    </div>
-    <div class="price">۱۲۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=300&q=80" alt="اسپرسو">
+<div class="info">
+<div class="item-name">اِسپِرسو</div>
+<div class="item-desc">قهوه‌ای غلیظ با عطری ماندگار</div>
+<div class="price">120,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">آمریکانو</div>
-      <div class="item-desc">اسپرسو با آب گرم</div>
-    </div>
-    <div class="price">۱۴۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=300&q=80" alt="آمریکانو">
+<div class="info">
+<div class="item-name">آمِریکانو</div>
+<div class="item-desc">اسپرسو با آب گرم</div>
+<div class="price">140,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">کاپوچینو</div>
-      <div class="item-desc">قهوه با شیر و فوم لطیف</div>
-    </div>
-    <div class="price">۱۶۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=300&q=80" alt="کاپوچینو">
+<div class="info">
+<div class="item-name">کاپوچینو</div>
+<div class="item-desc">اسپرسو، شیر و فوم لطیف</div>
+<div class="price">160,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">لاته</div>
-      <div class="item-desc">ترکیب اسپرسو و شیر</div>
-    </div>
-    <div class="price">۱۷۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo- latte" alt="لاته"
+onerror="this.src='https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=300&q=80'">
+<div class="info">
+<div class="item-name">لاتِه</div>
+<div class="item-desc">ترکیب دلنشین اسپرسو و شیر</div>
+<div class="price">170,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">موکا</div>
-      <div class="item-desc">قهوه با طعم شکلات</div>
-    </div>
-    <div class="price">۱۸۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=300&q=80" alt="موکا">
+<div class="info">
+<div class="item-name">موکا</div>
+<div class="item-desc">قهوه با طعم شکلات</div>
+<div class="price">180,000 <small>تومان</small></div>
+</div></div>
 </section>
 
 <section class="section" id="cold">
-  <h2 class="section-title">نوشیدنی سرد</h2>
+<h2 class="section-title">نوشیدنی سرد</h2>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">آیس لاته</div>
-      <div class="item-desc">لاته خنک با یخ</div>
-    </div>
-    <div class="price">۱۸۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=300&q=80" alt="آیس لاته">
+<div class="info">
+<div class="item-name">آیس لاتِه</div>
+<div class="item-desc">لاته خنک با یخ</div>
+<div class="price">180,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">آیس آمریکانو</div>
-      <div class="item-desc">اسپرسو سرد و خنک</div>
-    </div>
-    <div class="price">۱۵۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=300&q=80" alt="آیس آمریکانو">
+<div class="info">
+<div class="item-name">آیس آمِریکانو</div>
+<div class="item-desc">اسپرسوی خنک و خوش‌عطر</div>
+<div class="price">150,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">آیس موکا</div>
-      <div class="item-desc">قهوه سرد و شکلات</div>
-    </div>
-    <div class="price">۱۹۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=300&q=80" alt="آیس موکا">
+<div class="info">
+<div class="item-name">آیس موکا</div>
+<div class="item-desc">قهوه سرد و شکلات</div>
+<div class="price">190,000 <small>تومان</small></div>
+</div></div>
 </section>
 
 <section class="section" id="special">
-  <h2 class="section-title">نوشیدنی‌های ویژه</h2>
+<h2 class="section-title">ویژه آرما</h2>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">ماچا لاته</div>
-      <div class="item-desc">نوشیدنی با پودر ماچا و شیر</div>
-    </div>
-    <div class="price">۲۰۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=300&q=80" alt="ماچا">
+<div class="info">
+<div class="item-name">ماچا لاتِه</div>
+<div class="item-desc">ماچا و شیر با طعمی لطیف</div>
+<div class="price">200,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">هات چاکلت</div>
-      <div class="item-desc">شکلات داغ و خامه‌ای</div>
-    </div>
-    <div class="price">۱۷۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1542990253-0b8be4e8a7e7?auto=format&fit=crop&w=300&q=80" alt="هات چاکلت">
+<div class="info">
+<div class="item-name">هات چاکلِت</div>
+<div class="item-desc">شکلات داغ و خامه‌ای</div>
+<div class="price">170,000 <small>تومان</small></div>
+</div></div>
 </section>
 
-<section class="section" id="cake">
-  <h2 class="section-title">کیک و دسر</h2>
+<section class="section" id="dessert">
+<h2 class="section-title">کیک و دسر</h2>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">چیزکیک</div>
-      <div class="item-desc">دسر لطیف و خوش‌طعم</div>
-    </div>
-    <div class="price">۱۸۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=300&q=80" alt="چیزکیک">
+<div class="info">
+<div class="item-name">چیزکیک</div>
+<div class="item-desc">دسری لطیف با بافتی خامه‌ای</div>
+<div class="price">180,000 <small>تومان</small></div>
+</div></div>
 
-  <div class="menu-item">
-    <div class="item-info">
-      <div class="item-name">براونی شکلاتی</div>
-      <div class="item-desc">کیک شکلاتی مخصوص</div>
-    </div>
-    <div class="price">۱۵۰ هزار تومان</div>
-  </div>
+<div class="menu-item">
+<img class="product-img" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=300&q=80" alt="براونی">
+<div class="info">
+<div class="item-name">براونی شکلاتی</div>
+<div class="item-desc">کیک شکلاتی با طعمی عمیق</div>
+<div class="price">150,000 <small>تومان</small></div>
+</div></div>
 </section>
 
-<p class="note">
-  قیمت‌های این نسخه نمونه هستند و باید با منوی واقعی کافه جایگزین شوند.
-</p>
+<section class="club" id="club">
+<h2>باشگاه مشتریان آرما</h2>
+<p>عضو خانواده آرما شو و برای روز تولدت هدیه ویژه دریافت کن.</p>
+<form onsubmit="event.preventDefault();alert('این فرم هنوز به سامانه ثبت اطلاعات متصل نشده است.');">
+<input type="text" name="name" placeholder="نام شما" autocomplete="name" required>
+<input type="tel" name="phone" placeholder="شماره موبایل" autocomplete="tel" required>
+<label for="birthday" style="font-size:12px;color:#c9bda6">تاریخ تولد</label>
+<input id="birthday" type="date" name="birthday" required>
+<button type="submit">عضویت در باشگاه</button>
+</form>
+<div class="disclaimer">
+فرم فعلاً نمایشی است. برای ثبت امن اطلاعات و ارسال پیامک تولد، اتصال سامانه لازم است.
+</div>
+</section>
+
+<p class="note">قیمت‌ها نمونه هستند؛ پیش از انتشار نهایی، آن‌ها را با منوی واقعی کافه هماهنگ کنید.</p>
 
 <footer>
-  <strong>ARMA</strong>
-  <p>یک تجربه متفاوت، یک طعم ماندگار</p>
-  <p>با عشق برای لحظه‌های شما</p>
+<strong>ARMA COFFEE</strong>
+<p>MORE THAN JUST COFFEE</p>
+<p>برای لحظه‌هایی که خاص می‌مانند.</p>
 </footer>
 
 </body>
