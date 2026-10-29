@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<title>ARMA | کافه آرما</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #101010;
+  color: #f5f0e6;
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.9;
+}
+
+header {
+  text-align: center;
+  padding: 38px 15px 28px;
+  background: linear-gradient(180deg, #242019, #101010);
+  border-bottom: 1px solid #8c713e;
+}
+
+.logo {
+  width: 76px;
+  height: 76px;
+  border: 2px solid #d4af67;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  color: #e0bd79;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 39px;
+  letter-spacing: 7px;
+  color: #e2c17f;
+  direction: ltr;
+}
+
+.subtitle {
+  color: #c9bda6;
+  font-size: 12px;
+  letter-spacing: 3px;
+  direction: ltr;
+}
+
+.welcome {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #e4dccd;
+}
+
+nav {
+  display: flex;
+  gap: 9px;
+  padding: 18px 12px;
+  overflow-x: auto;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #101010;
+  border-bottom: 1px solid #30291e;
+}
+
+nav a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #e1c17e;
+  border: 1px solid #75603b;
+  border-radius: 22px;
+  padding: 5px 13px;
+  font-size: 12px;
+}
+
+.section {
+  padding: 25px 16px 10px;
+  max-width: 700px;
+  margin: auto;
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  font-size: 21px;
+  color: #e2c17f;
+  margin-bottom: 16px;
+  padding-right: 10px;
+  border-right: 3px solid #c4a15e;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #1b1a17;
+  border: 1px solid #353027;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #f4ead7;
+}
+
+.item-desc {
+  color: #a9a194;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.price {
+  white-space: nowrap;
+  color: #e2c17f;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.note {
+  text-align: center;
+  color: #8e8779;
+  font-size: 10px;
+  margin: 25px 10px;
+}
+
+footer {
+  margin-top: 35px;
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid #55452b;
+  background: #191713;
+}
+
+footer strong {
+  color: #e2c17f;
+  font-size: 24px;
+  letter-spacing: 4px;
+  direction: ltr;
+  display: inline-block;
+}
+
+footer p {
+  color: #a9a194;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+@media (min-width: 600px) {
+  .menu-item {
+    padding: 18px 20px;
+  }
+  .section {
+    padding-top: 35px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">A</div>
+  <h1>ARMA</h1>
+  <div class="subtitle">COFFEE & MORE</div>
+  <p class="welcome">به دنیای طعم‌های خاص خوش آمدید</p>
+</header>
+
+<nav>
+  <a href="#hot">قهوه گرم</a>
+  <a href="#cold">نوشیدنی سرد</a>
+  <a href="#special">نوشیدنی ویژه</a>
+  <a href="#cake">کیک و دسر</a>
+</nav>
+
+<section class="section" id="hot">
+  <h2 class="section-title">قهوه گرم</h2>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">اسپرسو</div>
+      <div class="item-desc">قهوه غلیظ با عطر ماندگار</div>
+    </div>
+    <div class="price">۱۲۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">آمریکانو</div>
+      <div class="item-desc">اسپرسو با آب گرم</div>
+    </div>
+    <div class="price">۱۴۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">کاپوچینو</div>
+      <div class="item-desc">قهوه با شیر و فوم لطیف</div>
+    </div>
+    <div class="price">۱۶۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">لاته</div>
+      <div class="item-desc">ترکیب اسپرسو و شیر</div>
+    </div>
+    <div class="price">۱۷۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">موکا</div>
+      <div class="item-desc">قهوه با طعم شکلات</div>
+    </div>
+    <div class="price">۱۸۰ هزار تومان</div>
+  </div>
+</section>
+
+<section class="section" id="cold">
+  <h2 class="section-title">نوشیدنی سرد</h2>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">آیس لاته</div>
+      <div class="item-desc">لاته خنک با یخ</div>
+    </div>
+    <div class="price">۱۸۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">آیس آمریکانو</div>
+      <div class="item-desc">اسپرسو سرد و خنک</div>
+    </div>
+    <div class="price">۱۵۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">آیس موکا</div>
+      <div class="item-desc">قهوه سرد و شکلات</div>
+    </div>
+    <div class="price">۱۹۰ هزار تومان</div>
+  </div>
+</section>
+
+<section class="section" id="special">
+  <h2 class="section-title">نوشیدنی‌های ویژه</h2>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">ماچا لاته</div>
+      <div class="item-desc">نوشیدنی با پودر ماچا و شیر</div>
+    </div>
+    <div class="price">۲۰۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">هات چاکلت</div>
+      <div class="item-desc">شکلات داغ و خامه‌ای</div>
+    </div>
+    <div class="price">۱۷۰ هزار تومان</div>
+  </div>
+</section>
+
+<section class="section" id="cake">
+  <h2 class="section-title">کیک و دسر</h2>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">چیزکیک</div>
+      <div class="item-desc">دسر لطیف و خوش‌طعم</div>
+    </div>
+    <div class="price">۱۸۰ هزار تومان</div>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-info">
+      <div class="item-name">براونی شکلاتی</div>
+      <div class="item-desc">کیک شکلاتی مخصوص</div>
+    </div>
+    <div class="price">۱۵۰ هزار تومان</div>
+  </div>
+</section>
+
+<p class="note">
+  قیمت‌های این نسخه نمونه هستند و باید با منوی واقعی کافه جایگزین شوند.
+</p>
+
+<footer>
+  <strong>ARMA</strong>
+  <p>یک تجربه متفاوت، یک طعم ماندگار</p>
+  <p>با عشق برای لحظه‌های شما</p>
+</footer>
+
+</body>
+</html>
